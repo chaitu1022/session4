@@ -1,0 +1,29 @@
+<!-- <div class="container" style="margin-top: 10px;margin-bottom: 10px;" >
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="all" (change)="sendDataToParent()" [(ngModel)]="selectedInput" >
+        <label class="form-check-label" for="inlineRadio1">all ({{all}})</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="male" (change)="sendDataToParent()" [(ngModel)]="selectedInput">
+        <label class="form-check-label" for="inlineRadio2">male ({{male}})</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="female" (change)="sendDataToParent()" [(ngModel)]="selectedInput">
+        <label class="form-check-label" for="inlineRadio3">female ({{female}})</label>
+    </div>
+</div> -->
+
+<div class="container" style="margin-top: 10px;margin-bottom: 10px;" >
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" (change)="sendDataToParent()" value="all" [(ngModel)]="selectedInput" >
+        <label class="form-check-label" for="inlineRadio1">all ({{all}})</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" (change)="sendDataToParent()" value="male" [(ngModel)]="selectedInput">
+        <label class="form-check-label" for="inlineRadio2">male ({{male}})</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" (change)="sendDataToParent()" value="female" [(ngModel)]="selectedInput">
+        <label class="form-check-label" for="inlineRadio3">female ({{female}})</label>
+    </div>
+</div>

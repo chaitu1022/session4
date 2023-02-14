@@ -1,0 +1,26 @@
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>Full Name</td>
+                <td>Email</td>
+                <td>Gender</td>
+                <td>Age</td>
+                <td>Salary</td>
+                <td>Operations</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees;">
+                <th>{{emp.fullName | uppercase | GenderPipe: emp.gender}}</th>
+                <th>{{emp.email}}</th>
+                <th>{{emp.gender}}</th>
+                <th>{{emp.age}}</th>
+                <th>{{emp.contactNumber | currency : "INR"}}</th>
+                <th>
+                    <button class="btn btn-primary btn-sm" (click)="updateValue(emp)" >Update</button> 
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>

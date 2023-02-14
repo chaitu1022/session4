@@ -1,0 +1,73 @@
+<!-- <form class="form">
+    <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-3">
+            <label class="form-label" >Menu DropDown</label>
+            <select (change)="ShowSelectedDropDown($event)" class="form-select form-select-sm"
+                aria-label=".form-select-sm example">
+                <option selected>Open this select menu</option>
+                <option *ngFor="let empdropdown of empsDropDown" [value]="empdropdown.value" >
+                    {{empdropdown.value}}
+                </option>
+            </select>
+        </div>
+    </div>
+</form> -->
+
+<!-- <div class="container">
+    <button class="btn btn-primary" style="margin:10px;" (click)="RefreshRecords()" >Refresh Records</button>
+    <button class="btn btn-primary" style="margin-left: 5px;" (click)="AddNewRecord()" >Add New Record</button>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email</td>
+                <td>Age</td>
+                <td>ContactNumber</td>
+                <td>Operations</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees;trackBy:trackEmployeeRecords">
+                <th>{{emp.firstName}}</th>
+                <th>{{emp.lastName}}</th>
+                <th>{{emp.email}}</th>
+                <th>{{emp.age}}</th>
+                <th>{{emp.contactNumber}}</th>
+                <th>
+                    <button class="btn btn-danger btn-sm">Delete</button> 
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+
+<div class="container">
+    <button class="btn btn-primary" style="margin:10px;" (click)="RefreshRecords()" >Refresh Records</button>
+    <button class="btn btn-primary" style="margin-left: 5px;" (click)="AddNewRecord()" >Add New Record</button>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email</td>
+                <td>Age</td>
+                <td>ContactNumber</td>
+                <td>Operations</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees; let i = index;trackBy:trackEmployeeRecords" >
+                <td>{{emp.firstName}}</td>
+                <td>{{emp.lastName}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.age}}</td>
+                <td>{{emp.contactNumber}}</td>      
+                <th>
+                    <button class="btn btn-danger btn-sm" (click)="deleteRecord(i)" >Delete</button> 
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>

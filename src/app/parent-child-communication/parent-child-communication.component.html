@@ -1,0 +1,31 @@
+<app-child-component 
+[all]="getAllEmployeesCount()" 
+[male]="getMaleEmployeeCount()"
+[female]="getFemaleEmployeeCount()"
+(radioButtonChange)="radiobtnfromChildEvent($event)"
+>
+</app-child-component>
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>Full Name</td>
+                <td>Email</td>
+                <td>Gender</td>
+                <td>Age</td>
+                <td>Salary</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees;">
+                <ng-container *ngIf="selectedEmployee === 'all' || emp.gender?.toLowerCase() === selectedEmployee.toLowerCase()" >          
+                    <th>{{emp.fullName}}</th>
+                    <th>{{emp.email}}</th>
+                    <th>{{emp.gender}}</th>
+                    <th>{{emp.age}}</th>
+                    <th>{{emp.contactNumber}}</th>      
+                </ng-container>                
+            </tr>
+        </tbody>
+    </table>
+</div>
